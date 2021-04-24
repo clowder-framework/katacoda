@@ -10,4 +10,12 @@ Finally, we want to make sure a storageclass is defined
 `kubectl get storageclass`{{execute}}
 
 
-Next we will install the repository where clowder can be found
+```
+helm repo add ncsa https://opensource.ncsa.illinois.edu/charts
+```{{execute}}
+
+`helm install clowder ncsa/clowder --set commKey=katacoda`{{execute}}
+
+`kubectl port-forward --address 0.0.0.0 --namespace clowder svc/clowder 9000:9000`{{execute}}
+
+Render port 9000: https://[[HOST_SUBDOMAIN]]-9000-[[KATACODA_HOST]].environments.katacoda.com/

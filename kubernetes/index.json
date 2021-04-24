@@ -6,12 +6,24 @@
   "details": {
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Step 1 - Check Prerequisites",
         "text": "step1.md"
+      },
+      {
+        "title": "Step 2 - Add helm repository",
+        "text": "step2.md"
+      },
+      {
+        "title": "Step 3 - Add configuration file",
+        "text": "step3.md"
+      },
+      {
+        "title": "Step 4 - Start clowder",
+        "text": "step4.md"
       }
     ],
     "intro": {
-      "courseData": "launch.sh",
+      "code": "setup.sh",
       "text": "intro.md"
     },
     "finish": {
