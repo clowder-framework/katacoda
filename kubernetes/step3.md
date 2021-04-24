@@ -5,6 +5,8 @@ Clowder has many options that can be set. The helm chart will have many default 
 
 ```
 cat << EOF > katacoda.yaml
+storage: &storage local-storage
+
 commKey: katacoda
 
 initialAdmins:
@@ -18,18 +20,19 @@ users:
     password: katacoda
 
 persistence:
-  storageClass: local-storage
+  storageClass: *storage
 
 elasticsearch:
   persistence:
-    storageClass: local-storage
+    storageClass: *storage
 
 rabbitmq:
   persistence:
-    storageClass: local-storage
+    storageClass: *storage
 
 mongodb:
   persistence:
-    storageClass: local-storage
+    storageClass: *storage
+EOF
 ```{{execute}}
 
