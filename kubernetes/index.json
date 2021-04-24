@@ -23,11 +23,19 @@
       }
     ],
     "intro": {
-      "code": "setup.sh",
       "text": "intro.md"
     },
     "finish": {
       "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {
+          "file": "setup.sh",
+          "target": "/root/",
+          "chmod": "+x"
+        }
+      ]
     }
   },
   "environment": {
