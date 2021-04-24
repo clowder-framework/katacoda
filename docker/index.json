@@ -6,18 +6,6 @@
       {
         "title": "Step 1 - Downloading docker-compose file"
         "text": "step1.md"
-      },
-      {
-        "title": "Step 2 - Cusomizing docker-compose"
-        "text": "step2.md"
-      },
-      {
-        "title": "Step 3 - Running clowder using docker-compose"
-        "text": "step3.md"
-      },
-      {
-        "title": "Step 4 - Updating and restarting clowder"
-        "text": "step4.md"
       }
     ],
     "intro": {
