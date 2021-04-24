@@ -4,7 +4,7 @@
   "details": {
     "steps": [
       {
-        "title": "Step 1 - Downloading docker-compose file"
+        "title": "Step 1 - Downloading docker-compose file",
         "text": "step1.md"
       }
     ],
@@ -20,6 +20,6 @@
     "uilayout": "terminal"
   },
   "backend": {
-    "imageid": "ubuntu"
+    "imageid": "ubuntu:2004"
   }
 }
