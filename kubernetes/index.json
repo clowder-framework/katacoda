@@ -23,7 +23,7 @@
       }
     ],
     "intro": {
-      "code": "setup.sh",
+      "courseData": "setup.sh",
       "text": "intro.md"
     },
     "finish": {
