@@ -23,25 +23,17 @@
       }
     ],
     "intro": {
+      "code": "setup.sh",
       "text": "intro.md"
     },
     "finish": {
       "text": "finish.md"
-    },
-    "assets": {
-      "host01": [
-        {
-          "file": "setup.sh",
-          "target": "/root/",
-          "chmod": "+x"
-        }
-      ]
     }
   },
   "environment": {
     "uilayout": "terminal"
   },
   "backend": {
-    "imageid": "kubernetes-cluster-running:1.18 "
+    "imageid": "kubernetes-cluster-running:1.18"
   }
 }
