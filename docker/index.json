@@ -4,7 +4,7 @@
   "details": {
     "steps": [
       {
-        "title": "Step 1 - Downloading docker-compose file",
+        "title": "Step 1 - The docker-compose file(s)",
         "text": "step1.md"
       }
     ],
@@ -13,6 +13,12 @@
     },
     "finish": {
       "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {"file": "docker-compose.yml", "target": "/root/"},
+        {"file": "docker-compose.override.yml", "target": "/root/"}
+      ]
     }
   },
   "environment": {
