@@ -1,0 +1,26 @@
+{
+  "title": "Running Clowder with Kubernetes",
+  "description": "Using HELM to start clowder in a kubernetes cluster.",
+  "difficulty": "Intermediate",
+  "time": "10",
+  "details": {
+    "steps": [
+      {
+        "title": "Step 1",
+        "text": "step1.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "uilayout": "terminal"
+  },
+  "backend": {
+    "imageid": "kubernetes"
+  }
+}
