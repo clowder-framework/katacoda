@@ -1,0 +1,27 @@
+version: '3.5'
+
+services:
+  rabbitmq:
+    ports:
+      - 5672:5672
+      - 15672:15672
+
+# ----------------------------------------------------------------------
+# VOLUMES FOR PERSISTENT STORAGE
+# ----------------------------------------------------------------------
+volumes:
+  clowder-data:
+    driver_opts:
+      type: none
+      device: '${PWD}/volumes/clowder-data'
+      o: bind
+  clowder-custom:
+    driver_opts:
+      type: none
+      device: '${PWD}/volumes/clowder-custom'
+      o: bind
+  mongo:
+    driver_opts:
+      type: none
+      device: '${PWD}/volumes/mongo'
+      o: bind

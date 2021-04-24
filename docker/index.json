@@ -17,6 +17,10 @@
   },
   "environment": {
     "showvisualise": true,
+    "showdashboard": true,
+    "dashboards": [
+      {"name": "Clowder", "port": 9000}
+    ],
     "uilayout": "terminal"
   },
   "backend": {

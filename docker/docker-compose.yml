@@ -1,0 +1,80 @@
+version: '3.5'
+
+services:
+  # main clowder application
+  clowder:
+    image: clowder/clowder:1.16.0
+    restart: unless-stopped
+    networks:
+      - clowder
+    ports:
+      - 9000:9000
+    depends_on:
+      - mongo
+      - rabbitmq
+      - elasticsearch
+    environment:
+      - CLOWDER_ADMINS=admin@example.com
+      - RABBITMQ_URI=${RABBITMQ_URI:-amqp://guest:guest@rabbitmq/%2F}
+    volumes:
+      - clowder-custom:/home/clowder/custom
+      - clowder-data:/home/clowder/data
+
+  # database to hold metadata (required)
+  mongo:
+    image: mongo:3.6
+    restart: unless-stopped
+    networks:
+      - clowder
+    volumes:
+      - mongo:/data/db
+
+  # message broker (optional but needed for extractors)
+  rabbitmq:
+    image: rabbitmq:management-alpine
+    restart: unless-stopped
+    networks:
+      - clowder
+    environment:
+      - RABBITMQ_DEFAULT_USER=guest
+      - RABBITMQ_DEFAULT_PASS=guest
+    volumes:
+      - rabbitmq:/var/lib/rabbitmq
+
+  # search index (optional, needed for search and sorting future) 
+  elasticsearch:
+    image: elasticsearch:2
+    command: elasticsearch -Des.cluster.name="clowder"
+    networks:
+      - clowder
+    restart: unless-stopped
+    environment:
+      - cluster.name=clowder
+    volumes:
+      - elasticsearch:/usr/share/elasticsearch/data
+
+  # monitor clowder extractors
+  monitor:
+    image: clowder/monitor:${CLOWDER_VERSION:-latest}
+    restart: unless-stopped
+    networks:
+      - clowder
+    ports:
+      - 9999:9999
+    depends_on:
+      - rabbitmq
+    environment:
+      - RABBITMQ_URI=${RABBITMQ_URI:-amqp://guest:guest@rabbitmq/%2F}
+      - RABBITMQ_MGMT_PORT=15672
+
+# NETWORK FOR CONTAINER COMMUNICATION
+networks:
+  clowder:
+
+# VOLUMES FOR PERSISTENT STORAGE
+volumes:
+  clowder-data:
+  clowder-custom:
+  mongo:
+  rabbitmq:
+  elasticsearch:
