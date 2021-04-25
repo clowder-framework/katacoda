@@ -1,6 +1,7 @@
 {
   "title": "Clowder",
   "description": "Learn how to work with Clowder.",
+  "icon": "clowder/assets/avatar.png",
   "courses": [
     {
       "course_id": "docker",
