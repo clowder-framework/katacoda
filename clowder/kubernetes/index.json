@@ -23,7 +23,6 @@
       }
     ],
     "intro": {
-      "code": "launch.sh",
       "courseData": "env-init.sh",
       "text": "intro.md"
     },
