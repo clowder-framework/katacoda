@@ -1,0 +1,31 @@
+{
+  "title": "Running Clowder in Docker",
+  "description": "Learn how to run clowder using docker compose",
+  "details": {
+    "steps": [
+      {
+        "title": "Step 1 - Downloading docker-compose file",
+        "text": "step1.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "showvisualise": true,
+    "showdashboard": true,
+    "dashboards": [
+      {"name": "Clowder", "port": 9000},
+      {"name": "Clowder Monitor", "port": 9999},
+      {"name": "RabbitMQ", "port": 15672},
+    ],
+    "uilayout": "terminal"
+  },
+  "backend": {
+    "imageid": "ubuntu:2004"
+  }
+}

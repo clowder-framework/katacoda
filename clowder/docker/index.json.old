@@ -1,0 +1,37 @@
+{
+  "title": "Running Clowder in Docker",
+  "description": "Learn how to run clowder using docker compose",
+  "difficulty": "Intermediate",
+  "details": {
+    "steps": [
+      {
+        "title": "Step 1 - The docker-compose file(s)",
+        "text": "step1.md"
+      }
+    ],
+    "intro": {
+      "courseData": "dockerpull.sh",
+      "text": "intro.md"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {"file": "docker-compose.yml", "target": "/root/"},
+        {"file": "docker-compose.override.yml", "target": "/root/"}
+      ]
+    }
+  },
+  "environment": {
+    "showvisualise": true,
+    "showdashboard": true,
+    "dashboards": [
+      {"name": "Clowder", "port": 9000}
+    ],
+    "uilayout": "terminal"
+  },
+  "backend": {
+    "imageid": "ubuntu:2004"
+  }
+}
