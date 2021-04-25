@@ -1,14 +1,14 @@
 {
   "title": "Clowder",
-  "description": "Deploying Clowder",
-  "scenarios": [
+  "description": "Learn how to work with Clowder.",
+  "courses": [
     {
-      "id": "docker",
+      "course_id": "docker",
       "title": "Running Clowder using docker-compose",
       "description": "Using docker-compose to configure and deploy Clowder on a docker machine."
     },
     {
-      "id": "Kubernetes",
+      "course_id": "Kubernetes",
       "title": "Running Clowder in Kubernetes",
       "description": "Using Helm to configure and deploy Clowder in a Kubernetes environment."
     }
