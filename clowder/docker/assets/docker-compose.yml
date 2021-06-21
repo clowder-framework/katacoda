@@ -3,7 +3,7 @@ version: '3.5'
 services:
   # main clowder application
   clowder:
-    image: clowder/clowder:1.16.0
+    image: clowder/clowder:1.17.0
     restart: unless-stopped
     networks:
       - clowder
@@ -15,7 +15,7 @@ services:
       - elasticsearch
     environment:
       - CLOWDER_ADMINS=admin@example.com
-      - RABBITMQ_URI=${RABBITMQ_URI:-amqp://guest:guest@rabbitmq/%2F}
+      - RABBITMQ_URI=amqp://guest:guest@rabbitmq/%2F
     volumes:
       - clowder-custom:/home/clowder/custom
       - clowder-data:/home/clowder/data
@@ -55,7 +55,7 @@ services:
 
   # monitor clowder extractors
   monitor:
-    image: clowder/monitor:${CLOWDER_VERSION:-latest}
+    image: clowder/monitor:1.17.0
     restart: unless-stopped
     networks:
       - clowder
@@ -64,7 +64,7 @@ services:
     depends_on:
       - rabbitmq
     environment:
-      - RABBITMQ_URI=${RABBITMQ_URI:-amqp://guest:guest@rabbitmq/%2F}
+      - RABBITMQ_URI=amqp://guest:guest@rabbitmq/%2F
       - RABBITMQ_MGMT_PORT=15672
 
 # NETWORK FOR CONTAINER COMMUNICATION

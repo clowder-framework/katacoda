@@ -3,7 +3,7 @@ version: '3.5'
 services:
   # extract preview image
   imagepreview:
-    image: clowder/extractors-image-preview:latest
+    image: clowder/extractors-image-preview:2.2.1
     restart: unless-stopped
     networks:
       - clowder
@@ -11,7 +11,7 @@ services:
       - rabbitmq
       - clowder
     environment:
-      - RABBITMQ_URI=${RABBITMQ_URI:-amqp://guest:guest@rabbitmq/%2F}
+      - RABBITMQ_URI=amqp://guest:guest@rabbitmq/%2F
 
   rabbitmq:
     ports:
