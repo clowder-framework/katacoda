@@ -1,0 +1,26 @@
+commKey: katacoda
+
+initialAdmins:
+  - admin@example.com
+
+users:
+  - email: admin@example.com
+    firstname: Admin
+    lastname: User
+    admin: true
+    password: katacoda
+
+persistence:
+  storageClass: local-storage
+
+elasticsearch:
+  persistence:
+    storageClass: local-storage
+
+rabbitmq:
+  persistence:
+    storageClass: local-storage
+
+mongodb:
+  persistence:
+    storageClass: local-storage

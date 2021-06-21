@@ -1,13 +1,18 @@
-First we need to make sure all the pre-requisites are met to run clowder in kubernetes using HELM.
+Before we begin, we should check to make sure kubernetes is up and running. This is specific to katacoda, and will wait until the kubernetes cluster has started.
 
-The helm chart assumes version 3 of helm. Lets make sure we have the right version:
-`helm version`{{execute}}
+```
+launch.sh
+```{{execute}}
 
-Next we want to make sure kubernetes is ready and at least version 1.14
-`kubectl get nodes`{{execute}}
+Once kubernetes is running we can look a the cluster (cluster will have a single node).
 
-Finally, we want to make sure a storageclass is defined
-`kubectl get storageclass`{{execute}}
+```
+kubectl get nodes
+```{{execute}}
 
+The clowder helm chart needs helm version 3
+```
+helm version
+```{{execute}}
 
-Next we will install the repository where clowder can be found
+At this point we have a kubernetes cluster that can run clowder.

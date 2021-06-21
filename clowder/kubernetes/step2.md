@@ -5,7 +5,8 @@ helm repo add ncsa https://opensource.ncsa.illinois.edu/charts
 helm repo update
 ```{{execute}}
 
-We can search for the clowder helm chart using
-`helm search repo clowder`{{execute}}
+Lets check to make sure we can find clowder.
 
-Next we will configure clowder before we start it.
+```
+helm search repo clowder
+```{{execute}}
