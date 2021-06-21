@@ -1,21 +1,13 @@
-First we need to make sure all the pre-requisites are met to run clowder in kubernetes using HELM.
-
-The helm chart assumes version 3 of helm. Lets make sure we have the right version:
-`helm version`{{execute}}
-
-Next we want to make sure kubernetes is ready and at least version 1.14
-`kubectl get nodes`{{execute}}
-
-Finally, we want to make sure a storageclass is defined
-`kubectl get storageclass`{{execute}}
-
+At this point we are ready to start clowder using Helm using the previously configured values.
 
 ```
-helm repo add ncsa https://opensource.ncsa.illinois.edu/charts
+helm install clowder ncsa/clowder --values katacoda.yaml
 ```{{execute}}
 
-`helm install clowder ncsa/clowder --set commKey=katacoda`{{execute}}
+This command will start all parts of clowder, and add a single user to clowder. To check the progress use
 
-`kubectl port-forward --address 0.0.0.0 --namespace clowder svc/clowder 9000:9000`{{execute}}
+```
+kubectl get pods
+````{{execute}}
 
-Render port 9000: https://[[HOST_SUBDOMAIN]]-9000-[[KATACODA_HOST]].environments.katacoda.com/
+Once all pods are ready, clowder has started.

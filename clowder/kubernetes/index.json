@@ -20,6 +20,10 @@
       {
         "title": "Start Clowder",
         "text": "step4.md"
+      },
+      {
+        "title": "Connecting to Clowder",
+        "text": "step5.md"
       }
     ],
     "intro": {
