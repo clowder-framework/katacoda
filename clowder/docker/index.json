@@ -5,8 +5,20 @@
   "details": {
     "steps": [
       {
-        "title": "Step 1 - The docker-compose file(s)",
+        "title": "Step 1 - The docker-compose File(s)",
         "text": "step1.md"
+      },
+      {
+        "title": "Step 2 - Setting Up Folders",
+        "text": "step2.md"
+      },
+      {
+        "title": "Step 3 - Starting Clowder",
+        "text": "step3.md"
+      },
+      {
+        "title": "Step 4 - Checking Clowder Containers",
+        "text": "step4.md"
       }
     ],
     "intro": {
