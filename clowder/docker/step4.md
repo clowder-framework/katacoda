@@ -1,5 +1,3 @@
-# Adding first user
-
 At this point we have clowder up and running. Before we can login, we need to add the first user to the system. Additional users can be done using the signup, however the first user needs to be done manually since there are no adiministrators at this point to approve the user.
 
 ```

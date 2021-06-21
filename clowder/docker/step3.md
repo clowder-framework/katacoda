@@ -1,4 +1,8 @@
-# Starting Clowder
+Before we start clowder, we will pull the images from dockerhub, this will make sure we have all the latest images ready. This can take a little time depending on the bandwith, and if he images are already cached.
+
+```
+docker-compose pull
+```{{execute}}
 
 We are now ready to start clowder. All the containers can be started using the docker-compose command. If no file argument is given, it will use the `docker-compose.yml` file, as well if it exists, the `docker-compose.override.yml` file.
 

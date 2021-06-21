@@ -1,5 +1,3 @@
-# Setting Up Folders
-
 As you could see before we added overrides to the docker-compose to make sure the data for clowder is saved on the local file system, and not in the docker container.
 
 ```

@@ -1,5 +1,3 @@
-# The docker-compose File(s)
-
 We will use docker-compose to run Clowder. In this scenario we have provided you with the files that are needed to start clowder using docker-compose. 
 
 If you look a the `docker-compose.yml` file you will see it is a slightmly modified version of the default that is distributed on [GitHub](https://github.com/clowder-framework/clowder/blob/develop/docker-compose.yml). 
