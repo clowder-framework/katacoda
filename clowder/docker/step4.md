@@ -1,19 +1,18 @@
-# Starting Clowder using Docker
+# Adding first user
 
-Create the folders:
-
-Before we start clowder, we need to make sure the folders are created for clowder and mongo, and have the right permissions:
+At this point we have clowder up and running. Before we can login, we need to add the first user to the system. Additional users can be done using the signup, however the first user needs to be done manually since there are no adiministrators at this point to approve the user.
 
 ```
-mkdir -p ${PWD}/volumes/{clowder-data,clowder-custom,mongo}
-chmod 777 ${PWD}/volumes/*
+docker exec --rm -ti --network root_clowder \
+	-e FIRST_NAME=Admin
+	-e LAST_NAME=User
+    -e EMAIL_ADDRESS=admin@example.com \
+    -e PASSWORD=catsarecute \
+    -e ADMIN=true \
+	clowder/mongo-init \
 ```{{execute}}
 
-Next we can start the clowder stack:
-```
-docker-compose up -d
-```{{execute}}
+At this point we can login into clowder https://[[HOST_SUBDOMAIN]]-9000-[[KATACODA_HOST]].environments.katacoda.com/
 
-And we can see clowder up and running.
-
-Render port 9000: https://[[HOST_SUBDOMAIN]]-9000-[[KATACODA_HOST]].environments.katacoda.com/
+username `admin@example.com`{{copy}}
+password `catsarecute`{{copy}}

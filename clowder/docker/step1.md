@@ -13,6 +13,6 @@ Check out the second file, docker-compose.override.yml, This will override the d
 
 ```
 cat docker-compose.override.yml
-```
+```{{execute}}
 
 This file also add overrides for the folders, so they are saved outside of docker.
