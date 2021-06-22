@@ -47,7 +47,6 @@
     }
   },
   "environment": {
-    "showvisualise": true,
     "showdashboard": true,
     "dashboards": [
       {
