@@ -7,5 +7,5 @@
 #rm -rf linux-amd64 helm-v3.5.4-linux-amd64.tar.gz
 
 # wait for kubernetes
-#launch.sh
-echo "hello" > text
+launch.sh
+echo "Ready"
