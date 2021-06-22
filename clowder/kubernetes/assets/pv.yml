@@ -10,7 +10,7 @@ spec:
   accessModes:
     - ReadWriteMany
   hostPath:
-    path: "/root/volumes/clowder"
+    path: "/root/clowder"
 ---
 apiVersion: v1
 kind: PersistentVolume
@@ -23,7 +23,7 @@ spec:
   accessModes:
     - ReadWriteOnce
   hostPath:
-    path: "/root/volumes/elasticsearch"
+    path: "/root/elasticsearch"
 ---
 apiVersion: v1
 kind: PersistentVolume
@@ -36,7 +36,7 @@ spec:
   accessModes:
     - ReadWriteOnce
   hostPath:
-    path: "/root/volumes/mongodb"
+    path: "/root/mongodb"
 ---
 apiVersion: v1
 kind: PersistentVolume
@@ -49,4 +49,4 @@ spec:
   accessModes:
     - ReadWriteOnce
   hostPath:
-    path: "/root/volumes/rabbitmq"
+    path: "/root/rabbitmq"
