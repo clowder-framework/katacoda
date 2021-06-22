@@ -10,4 +10,4 @@ This command will start all parts of clowder, and add a single user to clowder. 
 kubectl get pods -w
 ```{{execute}}
 
-Once all pods are ready, clowder has started.
+Once all pods are ready, clowder has started and you can use `^C`{{execute ctrl-seq}} to stop.
