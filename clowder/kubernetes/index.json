@@ -36,6 +36,10 @@
     "assets": {
       "host01": [
         {
+          "file": "pv.yml",
+          "target": "/root/"
+        },
+        {
           "file": "katacoda.yml",
           "target": "/root/"
         }

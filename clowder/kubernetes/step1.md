@@ -15,4 +15,12 @@ The clowder helm chart needs helm version 3
 helm version
 ```{{execute}}
 
+Katacoda does not have a default storage class, before starting clowder, lets create some persistent volumes that we will use later.
+
+```
+mkdir -p /root/volumes/{clowder,elasticsearch,mongodb,rabbitmq}
+kubectl apply -f pv.yml
+```{{execute}}
+
+
 At this point we have a kubernetes cluster that can run clowder.

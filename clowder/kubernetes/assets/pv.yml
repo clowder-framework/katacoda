@@ -1,0 +1,52 @@
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: clowder-data
+spec:
+  storageClassName: local-storage
+  capacity:
+    storage: 20Gi
+  accessModes:
+    - ReadWriteMany
+  hostPath:
+    path: "/root/volumes/clowder"
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: clowder-elasticsearch-data-clowder-elasticsearch-0
+spec:
+  storageClassName: local-storage
+  capacity:
+    storage: 2Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/root/volumes/elasticsearch"
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: clowder-mongodb
+spec:
+  storageClassName: local-storage
+  capacity:
+    storage: 8Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/root/volumes/mongodb"
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: data-clowder-rabbitmq-0
+spec:
+  storageClassName: local-storage
+  capacity:
+    storage: 8Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/root/volumes/rabbitmq"
