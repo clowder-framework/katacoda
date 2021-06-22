@@ -19,6 +19,7 @@ Katacoda does not have a default storage class, before starting clowder, lets cr
 
 ```
 mkdir -p /root/volumes/{clowder,elasticsearch,mongodb,rabbitmq}
+chmod 777 /root/volumes/*
 kubectl apply -f pv.yml
 ```{{execute}}
 
